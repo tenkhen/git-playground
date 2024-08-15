@@ -28,7 +28,7 @@
 
 ---
 
-### Create remote git repo - If you haven't created your remote git repo, follow this step
+### Create remote git repo - If you haven't created your remote git repo, follow these steps
 
 1. Go to GitHub website
 2. New repository
@@ -38,7 +38,7 @@
 
 ---
 
-### Push - Upload changes from local repo to remote repo
+### Push - Upload changes from local git repo to remote git repo
 
 1. `git remote add origin https://github.com/your-github-name/remote-repo.git` (replace your-github-name and remote-repo accordingly)
 2. `git branch -M main`
@@ -51,17 +51,19 @@
 1. Go to GitHub and click on the repo
 2. Click on Code with a green button
 3. Copy the link which ends with .git
-4. Open terminal and go to the director where you want to save the clone
+4. Open terminal and go to the directory where you want to save the clone
 5. use `git clone remote-repo-url.git`
 
-### Fetch - Downloads new update from online repo to the local git repo (NOT working tree/directory)
+---
+
+### Fetch - Download new update from online git repo to the local git repo (NOT working tree/directory)
 
 1. `git fetch` 
 2. `git merge` to merge new update with the working tree
 
 ---
 
-### Pull - Runs both above commands (git fetch, git merge)
+### Pull - Run both above commands (git fetch, git merge)
 
 - `git pull`
 <br><br>![this is alt text: an image of git fetch, merge, pull](git-fetch-pull.gif)
@@ -78,7 +80,7 @@ Stash changes
 
 Pop - Bring back old changes from stash
 
-- `git stash pop` or `git stash apply` (similar to pop, but pop will remove from stash)
+- `git stash pop` or `git stash apply` (similar to pop, but pop will remove the item from stash)
 
 List - Check all items in the stash
 
