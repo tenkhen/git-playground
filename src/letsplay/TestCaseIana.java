@@ -11,6 +11,8 @@ public class TestCaseIana {
 		String noElse="Life is Beautiful.Enjoy, make kids, have fun!Period";
 	}
 
+	String statement = "Well said, Iana!";
 	}
 
+	
 }
