@@ -56,16 +56,16 @@
 
 ---
 
-### Fetch - Download new update from online git repo to the local git repo (NOT working tree/directory)
+### Fetch
 
-1. `git fetch` 
+1. `git fetch` to download new update from online git repo to the local git repo (NOT to the working tree/directory)
 2. `git merge` to merge new update with the working tree
 
 ---
 
-### Pull - Run both above commands (git fetch, git merge)
+### Pull
 
-- `git pull`
+- `git pull` runs both above commands (git fetch, git merge)
 <br><br>![this is alt text: an image of git fetch, merge, pull](git-fetch-pull.gif)
 
 ---
@@ -74,7 +74,7 @@
 
 Stash changes
 
-1. Make changes
+1. Make some changes
 2. `git add .` (add changes to stage)
 2. `git stash` or `git stash push` to stash changes that haven't been committed
 
@@ -90,7 +90,7 @@ Clear - Clear items in the stash
 
 - `git stash clear`
 
-In case you want to stash un-tracked changes, we need to to use -u (un-tracked)
+In case you want to stash un-tracked changes, you need to use -u (un-tracked)
 
 - `git stash -u`
 
@@ -107,11 +107,14 @@ In a scenario where you made some changes and at the same time another collabora
 5. now you can open that file and make changes. For example which changes you want to keep or remove and save the file
 6. `git add .` (add merged file to the staging area)
 7. `git commit -m "commit message"`
+8. `git push`
+
+---
 
 ### Steps to push updated files
 
 1. `git pull` (when you collaborate with others, always first pull updated files)
-2. Make changes
+2. Make some changes
 3. `git add .` (add changes to stage)
 4. `git commit -m 'Your message'`
 5. `git push`
