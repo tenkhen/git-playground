@@ -104,7 +104,7 @@ In a scenario where you made some changes and at the same time another collabora
 2. `git stash -m "my changes"` (stash your changes)
 3. `git pull` (get changes of other collaborators)
 4. `git stash pop` (bring back your changes from stash. This will merge two files and will show both changes in same file)
-5. now you can open that file and make changes. For example which changes you want to keep or remove and save the file
+5. now you can open that file and make your decision. For example which changes you want to keep or remove and save the file
 6. `git add .` (add merged file to the staging area)
 7. `git commit -m "commit message"`
 8. `git push`
