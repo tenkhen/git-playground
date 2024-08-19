@@ -1,5 +1,5 @@
-
-public class File1 {
+package letsplay;
+public class TestNargiz {
 
 	public static void main(String[] args) {
 
