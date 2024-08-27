@@ -6,7 +6,7 @@ public class Test_betul {
 		
 		System.out.println("This is a test class for Betul!");
 	
-	System.out.println("Added a new branch");
+	System.out.println("Added a new branch!");
 	
 	}
 
