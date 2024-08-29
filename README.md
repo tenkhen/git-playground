@@ -5,11 +5,11 @@
 1. Check if there is .git folder by `ls -a`
 2. If there is already a .git in the directory, delete it by `rm -rf .git`
 3. Configuring .gitignore file: (if you don't see one, you can create it)
-	- Add files you don't want to upload to git repository. If there is forward slash in front of it, just remove it.
-   For example: `/filename` this is a comment in .gitignore file which means it WILL upload that file
+   - Add files you don't want to upload to git repository. If there is forward slash in front of it, just remove it.
+     For example: `/filename` this is a comment in .gitignore file which means it WILL upload that file
 
 ---
-  
+
 ### Initialize git
 
 - Initialize git repository with `git init`
@@ -66,7 +66,7 @@
 ### Pull
 
 - `git pull` runs both above commands (git fetch, git merge)
-<br><br>![this is alt text: an image of git fetch, merge, pull](git-fetch-pull.gif)
+  <br><br>![this is alt text: an image of git fetch, merge, pull](git-fetch-pull.gif)
 
 ---
 
@@ -76,7 +76,7 @@ Stash changes
 
 1. Make some changes
 2. `git add .` (add changes to stage)
-2. `git stash` or `git stash push` to stash changes that haven't been committed
+3. `git stash` or `git stash push` to stash changes that haven't been committed
 
 Pop - Bring back old changes from stash
 
@@ -96,6 +96,28 @@ In case you want to stash un-tracked changes, you need to use -u (un-tracked)
 
 ---
 
+### Git Branch
+
+View branch
+
+- `git branch` (shows only local branch)
+- `git branch -a` (shows all local and remote branches)
+
+Create a branch
+
+- `git branch branch-name` (creates a new branch)
+- `git checkout -b branch-name` (creates a new branch and switches to it automatically)
+
+Switch branch
+
+- `git checkout branch-name` (switches to a branch)
+
+Delete a branch
+
+- git branch -D branch-name (removes a branch. Make sure you are on another branch)
+
+---
+
 ### Handling Merge Conflict with Stash
 
 In a scenario where you made some changes and at the same time another collaborator made also changes in the same file as well
@@ -108,6 +130,23 @@ In a scenario where you made some changes and at the same time another collabora
 6. `git add .` (add merged file to the staging area)
 7. `git commit -m "commit message"`
 8. `git push`
+
+---
+
+### Handling Merge Conflict with Branch (Pull Request)
+
+1. `git branch new-branch` (creates a new branch)
+2. Make your changes and then `git add .` and `git commit -m "made some changes"` (notice that when you are in the new branch and use git add . and git commit, it ONLY affects to the current branch you are in)
+3. `git push origin new-branch` (pushes your changes to the new branch. If some reason, you get `! [rejected]` message, you can simply use `git push -f origin new-branch` (-f for force push))
+4. On the GitHub, if you see `Compare & pull request` on main branch, click on it. If you don’t see, then go to the new-branch and click `Contribute` and click `Open pull request`
+5. If there is no conflict then simply click `Create pull request` > `Merge pull request` > `Confirm merge` (you can delete the branch or simply leave it there)
+6. In case if there is a merge conflict, you will see `Can’t automatically merge`
+7. Click on `Create pull request`, Add a title and description and then click `Create pull request`
+8. Now you will see the `Resolve conflict` button and click on it
+9. Here you can make changes to the files and decide which line of code you want to keep or delete and click `Mark as resolved`
+10. Click `Commit merge` (if you see pop up, click on `I understand, continue updating main`)
+11. Now you can click `Merge pull request` > `Confirm merge`
+12. Finally pull merged main with `git pull origin main` to update current branch (new-branch). And then switch to main branch and `git pull` to update main branch as well
 
 ---
 
