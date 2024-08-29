@@ -110,11 +110,11 @@ Create a branch
 
 Switch branch
 
-- `git checkout branch-name` (switches to a branch)
+- `git checkout branch-name` (switches to a branch manually)
 
 Delete a branch
 
-- git branch -D branch-name (removes a branch. Make sure you are on another branch)
+- `git branch -D branch-name` (removes a branch. Make sure you are on another branch)
 
 ---
 
