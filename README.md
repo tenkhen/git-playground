@@ -148,17 +148,18 @@ In a scenario where you made some changes and at the same time another collabora
 ### Handling Merge Conflict with Branch (Pull Request)
 
 1. `git branch new-branch` (creates a new branch)
-2. Make your changes and then `git add .` and `git commit -m "made some changes"` (notice that when you are in the new branch and use git add . and git commit, it ONLY affects to the current branch you are in)
-3. `git push origin new-branch` (pushes your changes to the new branch. If some reason, you get `! [rejected]` message, you can simply use `git push -f origin new-branch` (-f for force push))
-4. On the GitHub, if you see `Compare & pull request` on main branch, click on it. If you don’t see, then go to the new-branch and click `Contribute` and click `Open pull request`
-5. If there is no conflict then simply click `Create pull request` > `Merge pull request` > `Confirm merge` (you can delete the branch or simply leave it there)
-6. In case if there is a merge conflict, you will see `Can’t automatically merge`
-7. Click on `Create pull request`, Add a title and description and then click `Create pull request`
-8. Now you will see the `Resolve conflict` button and click on it
-9. Here you can make changes to the files and decide which line of code you want to keep or delete and click `Mark as resolved`
-10. Click `Commit merge` (if you see pop up, click on `I understand, continue updating main`)
-11. Now you can click `Merge pull request` > `Confirm merge`
-12. Finally pull merged main with `git pull origin main` to update current branch (new-branch). And then switch to main branch and `git pull` to update main branch as well
+2. `git checkout new-branch` (switch to the new branch)
+3. Make your changes and then `git add .` and `git commit -m "made some changes"`
+4. `git push origin new-branch` (pushes your changes to the new branch. If some reason, you get `! [rejected]` message, you can use `git push -f origin new-branch` (-f for force))
+5. On the GitHub, if you see `Compare & pull request` on main branch, click on it. If you don’t see, then go to the new-branch and click `Contribute` and click `Open pull request`
+6. If there is no conflict then simply click `Create pull request` > `Merge pull request` > `Confirm merge` (you can delete the branch or simply leave it there)
+7. In case if there is a merge conflict, you will see `Can’t automatically merge`
+8. Click on `Create pull request`, Add a title and description and then click `Create pull request`
+9. Now you will see the `Resolve conflict` button and click on it
+10. Here you can make changes to the files and decide which line of code you want to keep or delete and click `Mark as resolved`
+11. Click `Commit merge` (if you see pop up, click on `I understand, continue updating main`)
+12. Now you can click `Merge pull request` > `Confirm merge`
+13. Finally pull merged main with `git pull origin main` to update current branch (new-branch). And then switch to main branch and `git pull` to update main branch as well
 
 ---
 
