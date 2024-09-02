@@ -46,6 +46,18 @@
 
 ---
 
+### Git Authentication - You need your GitHub email and a Personal Token to authenticate
+
+1. Go to GitHub and click on your profile picture > Settings > Developer settings (at the bottom) > Personal access tokens > Tokens (classic)
+2. Click Generate new token > Generate new token (classic)
+3. Confirm your github access (by using authenticator app or your GitHub password)
+4. Write a name for this personal token in Note. For example "For Selenium"
+5. Choose an Expiration (this personal token will expire on this expiration date)
+6. Select/Check "repo" from scope list. No need to choose others for this purpose
+7. Copy and paste this to somewhere safe. IMPORTANT! Make sure you copied it before you close the browser or you won't see it again and you will need to create new token
+
+---
+
 ### Clone - Get clone of remote repo (when you are collaborating with others)
 
 1. Go to GitHub and click on the repo
