@@ -7,6 +7,8 @@ public class TestCasePaul {
 		boolean gitIsIntuitive = false;
 		
 		boolean practiceCanMakeBetterIfNotPerfect = true;
+		
+		String update = "created branch paulDesany and edited this file";
 
 	}
 
